@@ -36,7 +36,11 @@ class CompanyInfoGetter(object):
     if response.status_code == 302:
       logging.warning(f"{1} HTTP response code {response.status_code}")
     elif response.status_code == 200:
-      parsedData = self.praseData(response.text)
+      try:
+        parsedData = self.praseData(response.text)
+      except Exception as e:
+        logging.error(f"[{1}] Error parse {e} ")
+        return
       self.dbHandler.insert(parsedData)
     else:
       logging.error(f"[{1}] HTTP response code {response.status_code} ")
