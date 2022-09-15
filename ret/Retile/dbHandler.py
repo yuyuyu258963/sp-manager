@@ -10,7 +10,6 @@ class DbHandler(object):
 
   def __init__(self,schemaName):
     self.connectStatus = False
-    self.schema = None
     self.connect(schemaName=schemaName)
   
   @property
@@ -40,6 +39,7 @@ class DbHandler(object):
       print("重复插入了")
       logging.warning(f"Error inserting_one repeat {itemData}")
     except Exception as e:
+      print(itemData)
       print(e)
       logging.warning(f"Error inserting_one {itemData}")
 

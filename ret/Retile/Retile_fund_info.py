@@ -173,7 +173,7 @@ def FundItemInfoGetter_code():
 
 def poolRetail_tasks():
   dataList = FundItemInfoGetter_code()
-  MyPoolThread(2, FundItemInfoGetter().start, dataList[:10])()
+  MyPoolThread(2, FundItemInfoGetter().start, dataList[11:20])()
 
 def test():
   FundItemInfoGetter().start("005062")
