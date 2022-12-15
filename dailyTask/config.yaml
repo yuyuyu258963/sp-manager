@@ -1,0 +1,6 @@
+- name: test
+  exePath: ./task.py 
+  description: 测试
+- name: test2
+  exePath: ./task2.py 
+  description: 测试

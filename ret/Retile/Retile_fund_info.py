@@ -92,7 +92,11 @@ class FundItemInfoGetter(Retile):
     """
       爬取基金信息
     """
-    response = requests.get(f"https://fund.10jqka.com.cn/{fund_code}/interduce.html#interduce", headers=self.headers, allow_redirects=False, proxies=self.proxies)
+    response = requests.get(f"https://fund.10jqka.com.cn/{fund_code}/interduce.html#interduce", 
+                            headers=self.headers, 
+                            allow_redirects=False, 
+                            proxies=self.proxies,
+                            )
     response.encoding = "utf8"
     if response.status_code == 200:
       return FundParser.parse_fundInfo(response.text)
@@ -173,7 +177,7 @@ def FundItemInfoGetter_code():
 
 def poolRetail_tasks():
   dataList = FundItemInfoGetter_code()
-  MyPoolThread(2, FundItemInfoGetter().start, dataList[11:20])()
+  MyPoolThread(6, FundItemInfoGetter().start, dataList[9780:9880])()
 
 def test():
   FundItemInfoGetter().start("005062")
