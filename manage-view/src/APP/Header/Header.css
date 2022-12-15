@@ -1,0 +1,69 @@
+#header {
+  height: 10vh;
+  background-color: #144785;
+}
+
+
+#menuList {
+  position: relative;
+  padding-top: 5vh;
+  height: 5vh;
+  float: left;
+  display: block;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.menuItem {
+  display: block;
+  text-align: center;
+  font-size: 3vh;
+  color: #fff;
+  float: left;
+  width: 10vw;
+  opacity: 1;
+}
+.menuItem:hover {
+  border-bottom: 3px solid #6cf;
+  background-color: #1d5dab;
+  cursor: pointer;
+}
+.menuItemSelected{
+  display: block;
+  text-align: center;
+  font-size: 3vh;
+  color: #fff;
+  float: left;
+  width: 10vw;
+  opacity: 1;
+  border-bottom: 3px solid #6cf;
+  background-color: #1d5dab;
+  cursor: pointer;
+}
+
+
+#userList {
+  position: relative;
+  padding-top: 5vh;
+  height: 5vh;
+  float: right;
+  display: block;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.userItem {
+  display: block;
+  text-align: center;
+  font-size: 3vh;
+  color: #fff;
+  float: left;
+  width: 10vw;
+  opacity: 1;
+}
+
+.userItem:hover{
+  background-color: #1d5dab;
+  cursor: pointer;
+}
+

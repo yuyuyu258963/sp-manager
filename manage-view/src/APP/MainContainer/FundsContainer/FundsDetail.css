@@ -1,0 +1,10 @@
+#FundsDetail{
+    width:90vw;
+    padding-left: 10vw;
+    padding-top: 5vh;
+    border-bottom: 1px solid #ccc;
+}
+
+.ti-right{
+    float:right;
+}

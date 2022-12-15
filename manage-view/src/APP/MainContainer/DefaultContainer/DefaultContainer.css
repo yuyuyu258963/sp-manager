@@ -1,0 +1,28 @@
+#defaultContainer{
+    /* height:60vh; */
+    /* background-color: #ccc; */
+}
+.introduction{
+    height:40vh;
+    width:100%;
+    margin-bottom: 1vw;
+    position:relative;
+    padding-top:2vh;
+    padding-left:10vw;
+    /* background-color: #ccc */
+}
+.introduction:last-child{
+    padding-bottom:10vh;
+}
+.img{
+    height:100%;
+    width: 35vw;
+    position: relative;
+}
+.description{
+    /* height:100%; */
+    width: 45vw;
+    display: inline-block;
+    position: absolute;
+    margin-left: 1vw;
+}
