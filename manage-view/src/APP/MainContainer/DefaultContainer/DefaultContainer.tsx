@@ -6,25 +6,39 @@ interface IProps {
 }
 
 interface IState {
-  imageName:Array<string>
+
+}
+
+interface FoundAndStock {
+  id: number;
+  name: string;
+  rate: number;
 }
 
 class DefaultContainer extends React.Component<IProps, IState>{
-  state: IState= {imageName:['image1','image2','image3']}
+  data: FoundAndStock[] = [{ id: 1, name: "Found1", rate: 2.3 },
+  { id: 2, name: "Found2", rate: 1.6 },
+  { id: 3, name: "Found3", rate: -1.2 }];
   render() {
     return (
       <div id="defaultContainer">
-        <div id='introductionContainer'>
-          {this.state.imageName.map((image: string,index:number) =>{
-            return (
-            <div className="introduction" key={index}>
-              <img className="img" src={require(`../../resource/images/${image}.jpg`)} alt={image} />
-              <div className="description">
-                <div>天天理财</div>
-              </div>
-            </div>
-            )
-          })}
+        <img className="defaultContainer-img" src={require(`../../resource/images/image5.jpg`)} alt={"image1"} />
+        <div className="defaultContainer-info">
+          {
+            this.data.map((found, index) => {
+              return (
+                <div className="defaultContainer-infoItem" key={index}>
+                  <div className="defaultContainer-infoItem-title">
+                    <h2>{found.name}</h2>
+                    <p>{found.name}</p>
+                  </div>
+                  <div className="defaultContainer-infoItem-rate">
+                    <h1 style={found.rate>0?{"color":"red"}:{"color":"green"}}>{found.rate}{found.rate>0?"↑":"↓"}</h1>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     )

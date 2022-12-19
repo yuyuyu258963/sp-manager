@@ -2,6 +2,7 @@ import { Table } from 'antd';
 import type { ColumnsType, TableProps } from 'antd/es/table';
 import React, { ReactElement } from 'react';
 import './FundsContainer.css'
+import { Link } from 'react-router-dom';
 
 interface IProps {
 
@@ -13,7 +14,7 @@ interface IState {
 
 interface DataType {
   key: React.Key;
-  name: string;
+  name: ReactElement;
   rate: string;
   timeLimit: string;
   progress:ReactElement;
@@ -55,7 +56,7 @@ class FundsContainer extends React.Component<IProps, IState>{
   data = [
     {
       key: '1',
-      name: '定存冠',
+      name: <Link to={"/funds/1"}>定存冠</Link>,
       rate: '6.70%',
       timeLimit: '2 个月',
       progress:<div><progress value={75} max={100}></progress>75%</div>,
@@ -63,7 +64,7 @@ class FundsContainer extends React.Component<IProps, IState>{
       operation:<button>预订</button>
     },{
       key: '2',
-      name: '定存冠',
+      name: <Link to={"/funds/2"}>定存冠</Link>,
       rate: '6.70%',
       timeLimit: '2 个月',
       progress:<div><progress value={75} max={100}></progress>75%</div>,
@@ -71,7 +72,7 @@ class FundsContainer extends React.Component<IProps, IState>{
       operation:<button>预订</button>
     },{
       key: '3',
-      name: '定存冠',
+      name: <Link to={"/funds/3"}>定存冠</Link>,
       rate: '6.70%',
       timeLimit: '2 个月',
       progress:<div><progress value={75} max={100}></progress>75%</div>,
@@ -79,7 +80,7 @@ class FundsContainer extends React.Component<IProps, IState>{
       operation:<button>预订</button>
     },{
       key: '4',
-      name: '定存冠',
+      name: <Link to={"/funds/4"}>定存冠</Link>,
       rate: '6.70%',
       timeLimit: '2 个月',
       progress:<div><progress value={75} max={100}></progress>75%</div>,
@@ -87,7 +88,7 @@ class FundsContainer extends React.Component<IProps, IState>{
       operation:<button>预订</button>
     },{
       key: '5',
-      name: '定存冠',
+      name: <Link to={"/funds/5"}>定存冠</Link>,
       rate: '6.70%',
       timeLimit: '2 个月',
       progress:<div><progress value={75} max={100}></progress>75%</div>,
@@ -99,7 +100,7 @@ class FundsContainer extends React.Component<IProps, IState>{
   render() {
     return (
       <div id="fundsContainer">
-        <Table columns={this.columns} dataSource={this.data} onChange={onChange} />
+        <Table columns={this.columns} dataSource={this.data} size="small" onChange={onChange} />
       </div>
     );
   }

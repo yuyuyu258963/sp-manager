@@ -1,10 +1,27 @@
-#FundsDetail{
-    width:90vw;
-    padding-left: 10vw;
-    padding-top: 5vh;
-    border-bottom: 1px solid #ccc;
+#FundsDetail {
+  width: 80vw;
+  margin-left: 10vw;
+  padding-top: 5vh;
+  border-bottom: 1px solid #ccc;
 }
 
-.ti-right{
-    float:right;
+.ti-right {
+  float: right;
+  margin-top:3vh;
+}
+
+.FundsName{
+  display: inline-block;
+}
+
+.FoundTips {
+  display: inline-block;
+  background-color: #eee;
+  border-radius:10px;
+}
+
+.FoundRisks {
+  display: inline-block;
+  background-color: #eee;
+  border-radius:10px;
 }
