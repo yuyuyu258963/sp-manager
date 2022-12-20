@@ -29,7 +29,13 @@ class Header extends React.Component<IProps, IState>{
         {this.state.isLogin ? (<div></div>) :
           (
             <ul id="userList">
-              <li className="userItem" id="log">登录</li>
+              {/* <li className="userItem" id="log"  >登录</li> */}
+              <NavLink 
+                to={"/userLogin"}
+                style={{ color: 'white' }}
+                >
+                  登录
+                </NavLink>
               <li className="userItem" id="reg">注册</li>
             </ul>
           )
