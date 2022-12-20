@@ -15,12 +15,20 @@ class App extends React.Component<IProps, IState>{
   render() {
     return (
       <div id="App">
-        <Header/>
-        <MainContainer/>
+        <MainWrap />
         {/* <Footer/> */}
       </div>
     )
   }
 }
 
-export default App
+function MainWrap() {
+  return (
+    <>
+      <Header/>
+        <MainContainer/>
+    </>
+  )
+}
+
+export default App;

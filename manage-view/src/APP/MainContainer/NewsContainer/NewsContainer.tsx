@@ -2,6 +2,7 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 import { Col, MenuProps, Row } from 'antd';
 import { Menu } from 'antd';
 import React from 'react';
+
 import './NewsContainer.css'
 
 type MenuItem = Required<MenuProps>['items'][number];

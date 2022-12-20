@@ -5,6 +5,8 @@ import NewsContainer from './NewsContainer/NewsContainer'
 import FundsContainer from './FundsContainer/FundsContainer'
 import StockContainer from './StockContainer/StockContainer'
 import ForeignExchangeContainer from './ForeignExchangeContainer/ForeignExchangeContainer'
+import { MyFundLogin, MyFundRegister } from '../Users';
+
 
 interface IProps {
 
@@ -23,6 +25,8 @@ class MainContainer extends React.Component<IProps, IState>{
           <Route path="/news" element={<NewsContainer/>}></Route>
           <Route path="/funds" element={<FundsContainer/>}></Route>
           <Route path="/stock" element={<StockContainer/>}></Route>
+          <Route path="/userLogin" element={<MyFundLogin/>}></Route>
+          <Route path="/userRegister" element={<MyFundRegister/>}></Route>
           <Route path="/foreignExchangeContainer" element={<ForeignExchangeContainer/>}></Route>
         </Routes>
       </div>
