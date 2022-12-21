@@ -3,23 +3,48 @@ import type { ColumnsType, TableProps } from 'antd/es/table';
 import React, { ReactElement } from 'react';
 import './FundsContainer.css'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+type fund = {
+  "_id": string,
+  "基金全称": ReactElement,
+  "基金类型": string,
+  "基金经理": string,
+  "成立日期": string,
+  "成立规模": string,
+  "份额规模": string,
+  "首次最低金额": string,
+  "托管费": string,
+  "基金管理人": string,
+  "最高认购费": string,
+  "最高申购费": string,
+  "最高赎回费": string
+}
 
 interface IProps {
 
 }
 
 interface IState {
-
+  data: fund[]
 }
 
+
+
 interface DataType {
-  key: React.Key;
-  name: ReactElement;
-  rate: string;
-  timeLimit: string;
-  progress:ReactElement;
-  amount:string;
-  operation:ReactElement;
+  _id: string,
+  基金全称: ReactElement,
+  基金类型: string,
+  基金经理: string,
+  成立日期: string,
+  成立规模: string,
+  份额规模: string,
+  首次最低金额: string,
+  托管费: string,
+  基金管理人: string,
+  最高认购费: string,
+  最高申购费: string,
+  最高赎回费: string
 }
 
 
@@ -29,78 +54,106 @@ const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter,
 
 class FundsContainer extends React.Component<IProps, IState>{
 
+  // constructor(props: IProps){
+  //   super(props);
+  //   this.state = {
+  //     data:[]
+  //   }
+  // }
+
+  state: Readonly<IState> = { data: [] };
+
+  componentDidMount(): void {
+    let _this = this;
+    axios(
+      {
+        method: "post",
+        url: '/api/show',
+      }
+    )
+      .then(function (response) {
+        //handle success data
+        let data: fund[] = response.data.map((fund: fund, index: number) => {
+          let link = `/funds/${fund._id}`
+          return {
+            "_id": fund._id,
+            "基金全称": <Link to={link} >{fund.基金全称}</Link>,
+            "基金类型": fund.基金类型,
+            "基金经理": fund.基金经理,
+            "成立日期": fund.成立日期,
+            "成立规模": fund.成立规模,
+            "份额规模": fund.份额规模,
+            "首次最低金额": fund.首次最低金额,
+            "托管费": fund.托管费,
+            "基金管理人": fund.基金管理人,
+            "最高认购费": fund.最高认购费,
+            "最高申购费": fund.最高申购费,
+            "最高赎回费": fund.最高赎回费
+          }
+        })
+        _this.setState({ data: data })
+      })
+      .catch(function (error) {
+        //handle error satuation
+        console.log(error)
+      })
+  }
+
   columns: ColumnsType<DataType> = [
     {
-      title: '名称',
-      dataIndex: 'name',
+      title: 'id',
+      dataIndex: '_id',
     },
     {
-      title: '年化收益',
-      dataIndex: 'rate',
+      title: '基金',
+      dataIndex: '基金全称',
     },
     {
-      title: '期限',
-      dataIndex: 'timeLimit',
-    },{
-      title: '进度',
-      dataIndex: 'progress',
-    },{
-      title: '金额',
-      dataIndex: 'amount',
-    },{
-      title: '操作',
-      dataIndex: 'operation',
+      title: '基金类型',
+      dataIndex: '基金类型',
+    },
+    {
+      title: '基金经理',
+      dataIndex: '基金经理',
+    }, {
+      title: '成立日期',
+      dataIndex: '成立日期',
+    }, {
+      title: '成立规模',
+      dataIndex: '成立规模',
+    }, {
+      title: '份额规模',
+      dataIndex: '份额规模',
+    }, {
+      title: '首次最低金额（元）',
+      dataIndex: '首次最低金额',
+    }, {
+      title: '托管费',
+      dataIndex: '托管费',
+    }, {
+      title: '基金管理人',
+      dataIndex: '基金管理人',
+    }, {
+      title: '最高认购费',
+      dataIndex: '最高认购费',
+    }, {
+      title: '最高申购费',
+      dataIndex: '最高申购费',
+    }, {
+      title: '最高赎回费',
+      dataIndex: '最高赎回费',
     }
   ]
 
-  data = [
-    {
-      key: '1',
-      name: <Link to={"/funds/1"}>定存冠</Link>,
-      rate: '6.70%',
-      timeLimit: '2 个月',
-      progress:<div><progress value={75} max={100}></progress>75%</div>,
-      amount:'$0',
-      operation:<button>预订</button>
-    },{
-      key: '2',
-      name: <Link to={"/funds/2"}>定存冠</Link>,
-      rate: '6.70%',
-      timeLimit: '2 个月',
-      progress:<div><progress value={75} max={100}></progress>75%</div>,
-      amount:'$0',
-      operation:<button>预订</button>
-    },{
-      key: '3',
-      name: <Link to={"/funds/3"}>定存冠</Link>,
-      rate: '6.70%',
-      timeLimit: '2 个月',
-      progress:<div><progress value={75} max={100}></progress>75%</div>,
-      amount:'$0',
-      operation:<button>预订</button>
-    },{
-      key: '4',
-      name: <Link to={"/funds/4"}>定存冠</Link>,
-      rate: '6.70%',
-      timeLimit: '2 个月',
-      progress:<div><progress value={75} max={100}></progress>75%</div>,
-      amount:'$0',
-      operation:<button>预订</button>
-    },{
-      key: '5',
-      name: <Link to={"/funds/5"}>定存冠</Link>,
-      rate: '6.70%',
-      timeLimit: '2 个月',
-      progress:<div><progress value={75} max={100}></progress>75%</div>,
-      amount:'$0',
-      operation:<button>预订</button>
-    }
-  ];
+
 
   render() {
+    const { data } = this.state;
     return (
       <div id="fundsContainer">
-        <Table columns={this.columns} dataSource={this.data} size="small" onChange={onChange} />
+        <Table columns={this.columns} dataSource={data === null ? [] : data} size="small" onChange={onChange} />
+        <input type="text"></input>
+        <input type="submit" value="Submit"></input>
       </div>
     );
   }

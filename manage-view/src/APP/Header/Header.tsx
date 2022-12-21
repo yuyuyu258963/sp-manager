@@ -18,10 +18,10 @@ class Header extends React.Component<IProps, IState>{
   state: IState = { isLogin: false, page: '首页' };
   pageList: Array<links> = [
     { page: "首页", link: "/" },
-    { page: "新闻", link: "/news" },
+    // { page: "新闻", link: "/news" },
     { page: "基金", link: "/funds" },
-    { page: "股票", link: "/stock" },
-    { page: "外汇", link: "/foreignExchangeContainer" }
+    // { page: "股票", link: "/stock" },
+    // { page: "外汇", link: "/foreignExchangeContainer" }
   ];
   render() {
     return (

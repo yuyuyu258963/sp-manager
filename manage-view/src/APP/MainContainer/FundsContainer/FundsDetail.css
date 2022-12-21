@@ -1,27 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 #FundsDetail {
   width: 80vw;
   margin-left: 10vw;
   padding-top: 5vh;
+}
+
+p{
+  display: inline-block;
+  width: 10vw;
+  float: left;
+}
+
+.BaseDataTitle {
   border-bottom: 1px solid #ccc;
 }
 
 .ti-right {
   float: right;
-  margin-top:3vh;
+  margin-top: 3vh;
 }
 
-.FundsName{
+.FundsName {
   display: inline-block;
 }
 
 .FoundTips {
   display: inline-block;
   background-color: #eee;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .FoundRisks {
   display: inline-block;
   background-color: #eee;
-  border-radius:10px;
+  color: #f44463;
+  border-radius: 10px;
+}
+
+.BaseDataContainer {
+  vertical-align: top;
+}
+
+.cartogram {
+  display: inline-block;
+}
+
+#picture_top {
+  height: 40vh;
+  width: 40vw;
+}
+
+#picture_bottom {
+  height: 40vh;
+  width: 40vw;
+}
+
+.data-display {
+  height: 35vh;
+  width: 40vw;
+  background-color: #fff;
+}
+
+.rate {
+  color: #f44446
+}
+
+.data-display {
+  margin-top: 2vh;
+}
+
+.d-wfsy{
+  width:10vw;
+  float: left;
+}
+
+.percent {
+  font-size: 30px;
+  color: #f44446;
+  overflow: hidden;
+}
+
+.sp-rate{
+  color: #f44446;
+}
+
+
+ul{
+  list-style: none;
+}
+
+.data-display-rate-list{
+  list-style: none;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  overflow: hidden;
+}
+.data-display-rate-list-item{
+  float: left;
+  display: block;
+  width:8vw;
+  line-height: 5vh;;
+}
+
+.data-display-bottom{
+  float: left;
+  width:20vw;
+  overflow: hidden;
+}
+.data-display-bottom-item{
+  display: block;
+  width:10vw;
+  line-height: 30px;
+  float: left;
+}
+.data-display-bottom-item:last-child{
+  width:20vw;
+}
+.found-detail{
+  display: inline-block;
+  padding-left: 1vw;
+}
+
+.im-state{
+  overflow: hidden;
+}
+
+.tips{
+  overflow: hidden;
+}
+
+.tips-i{
+  background-color: #f6f4f7
+}
+
+.cost{
+  color: #f44446;
 }

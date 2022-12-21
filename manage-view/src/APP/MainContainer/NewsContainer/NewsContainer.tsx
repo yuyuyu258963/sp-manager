@@ -78,7 +78,7 @@ class NewsContainer extends React.Component<IProps, IState>{
           <Col span={12} offset={1}>
             <div id="newsTitleList">
               <div id="newsGroupTitle"><strong>{this.state.newsgroupTitles}</strong></div>
-              <ul>
+              <ul className="newsTitleList-ul">
                 {this.newsDate.map((news, index) => {
                   return <li className="news" key={index}>
                     <Row>

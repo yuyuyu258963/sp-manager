@@ -9,6 +9,10 @@
     border-left: 1px solid #ccc;
 }
 
+.newsTitleList-ul{
+    padding-left:40px;
+}
+
 #newsGroupTitle{
     margin-left: 2vw;
     width: 48vw;
