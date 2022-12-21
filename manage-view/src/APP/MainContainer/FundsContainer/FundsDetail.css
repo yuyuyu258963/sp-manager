@@ -12,7 +12,6 @@
 p{
   display: inline-block;
   width: 10vw;
-  float: left;
 }
 
 .BaseDataTitle {
@@ -26,6 +25,9 @@ p{
 
 .FundsName {
   display: inline-block;
+}
+.FundsID{
+  color: #ccc
 }
 
 .FoundTips {
@@ -55,12 +57,12 @@ p{
 }
 
 #picture_bottom {
-  height: 40vh;
+  height: 30vh;
   width: 40vw;
 }
 
 .data-display {
-  height: 35vh;
+  height: 40vh;
   width: 40vw;
   background-color: #fff;
 }
@@ -78,10 +80,24 @@ p{
   float: left;
 }
 
-.percent {
+.percent-up {
   font-size: 30px;
   color: #f44446;
   overflow: hidden;
+}
+.percent-down{
+  font-size: 30px;
+  color: #0c9f18;
+  overflow: hidden;
+}
+
+.increase-up{
+  display: inline;
+  color:#f44446;
+}
+.increase-down{
+  display: inline;
+  color: #0c9f18;
 }
 
 .sp-rate{
@@ -113,7 +129,7 @@ ul{
 }
 .data-display-bottom-item{
   display: block;
-  width:10vw;
+  width:20vw;
   line-height: 30px;
   float: left;
 }

@@ -152,8 +152,6 @@ class FundsContainer extends React.Component<IProps, IState>{
     return (
       <div id="fundsContainer">
         <Table columns={this.columns} dataSource={data === null ? [] : data} size="small" onChange={onChange} />
-        <input type="text"></input>
-        <input type="submit" value="Submit"></input>
       </div>
     );
   }
