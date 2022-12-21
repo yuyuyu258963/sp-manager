@@ -1,0 +1,33 @@
+2022-12-20 09:33:59,983: _log: - WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-20 09:33:59,984: _log: - INFO:  * Running on http://192.168.1.106:5590/ (Press CTRL+C to quit)
+2022-12-20 09:34:45,411: _log: - INFO:  * Restarting with stat
+2022-12-20 09:34:47,964: _log: - WARNING:  * Debugger is active!
+2022-12-20 09:34:48,045: _log: - INFO:  * Debugger PIN: 306-226-461
+2022-12-20 09:34:50,330: _log: - WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-20 09:34:50,331: _log: - INFO:  * Running on http://192.168.1.106:5590/ (Press CTRL+C to quit)
+2022-12-20 09:36:28,981: _log: - INFO:  * Detected change in 'C:\\Users\\86136\\Desktop\\22年-大三上-期末相关\\软件项目管理\\sp-manager\\pyServer\\main.py', reloading
+2022-12-20 09:36:29,497: _log: - INFO:  * Restarting with stat
+2022-12-20 09:36:32,021: _log: - WARNING:  * Debugger is active!
+2022-12-20 09:36:32,111: _log: - INFO:  * Debugger PIN: 306-226-461
+2022-12-20 09:36:34,207: _log: - WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-20 09:36:34,207: _log: - INFO:  * Running on http://192.168.1.106:5590/ (Press CTRL+C to quit)
+2022-12-20 09:36:36,663: _log: - INFO:  * Detected change in 'C:\\Users\\86136\\Desktop\\22年-大三上-期末相关\\软件项目管理\\sp-manager\\pyServer\\main.py', reloading
+2022-12-20 09:36:36,950: _log: - INFO:  * Restarting with stat
+2022-12-20 09:36:39,912: _log: - WARNING:  * Debugger is active!
+2022-12-20 09:36:39,979: _log: - INFO:  * Debugger PIN: 306-226-461
+2022-12-20 09:36:41,947: _log: - WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-20 09:36:41,948: _log: - INFO:  * Running on http://192.168.1.106:5590/ (Press CTRL+C to quit)
+2022-12-20 09:40:11,620: _log: - INFO:  * Detected change in 'C:\\Users\\86136\\Desktop\\22年-大三上-期末相关\\软件项目管理\\sp-manager\\pyServer\\main.py', reloading
+2022-12-20 09:40:11,921: _log: - INFO:  * Restarting with stat
+2022-12-20 09:40:14,441: _log: - WARNING:  * Debugger is active!
+2022-12-20 09:40:14,502: _log: - INFO:  * Debugger PIN: 306-226-461
+2022-12-20 09:40:16,381: _log: - WARNING:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-20 09:40:16,382: _log: - INFO:  * Running on http://192.168.1.106:5590/ (Press CTRL+C to quit)
+2022-12-20 09:41:53,650: _log: - INFO: 127.0.0.1 - - [20/Dec/2022 09:41:53] "GET /rank HTTP/1.1" 200 -
+2022-12-20 09:49:25,317: _log: - INFO: 127.0.0.1 - - [20/Dec/2022 09:49:25] "GET /login HTTP/1.1" 200 -
+2022-12-20 09:56:37,613: _log: - INFO: 127.0.0.1 - - [20/Dec/2022 09:56:37] "GET /login?username=ywh&password=123 HTTP/1.1" 200 -
