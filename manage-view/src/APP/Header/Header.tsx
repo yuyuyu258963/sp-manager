@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { NavLink } from 'react-router-dom';
+import { MyFundLogin, MyFundRegister } from '../Users';
 
 interface IProps {
 
@@ -23,20 +24,26 @@ class Header extends React.Component<IProps, IState>{
     // { page: "股票", link: "/stock" },
     // { page: "外汇", link: "/foreignExchangeContainer" }
   ];
+
+
+  
   render() {
     return (
       <div id="header">
         {this.state.isLogin ? (<div></div>) :
           (
             <ul id="userList">
-              {/* <li className="userItem" id="log"  >登录</li> */}
+              <MyFundLogin />
+              <MyFundRegister />
+              
+              {/* <li className="userItem" id="reg">
               <NavLink 
-                to={"/userLogin"}
+                to={"/userRegister"}
                 style={{ color: 'white' }}
                 >
-                  登录
+                注册
                 </NavLink>
-              <li className="userItem" id="reg">注册</li>
+              </li> */}
             </ul>
           )
         }

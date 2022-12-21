@@ -18,11 +18,24 @@ interface IState {
 
 }
 
+
+const routes = [
+  {path:"/", element: <DefaultContainer/> },
+  {path:"/news", element: <NewsContainer/> },
+  {path:"/funds", element: <FundsContainer/> },
+  {path:"/funds/:id", element: <FundsDetail/> },
+  {path:"/stock", element: <StockContainer/> },
+  {path:"/userLogin", element: <MyFundLogin/> },
+  {path:"/userRegister", element: <MyFundRegister/> },
+  {path:"/foreignExchangeContainer", element: <ForeignExchangeContainer/> },
+];
+
 class MainContainer extends React.Component<IProps, IState>{
   render() {
     return (
       <div id="mainContainer">
         <Routes>
+          
           <Route path="/" element={<DefaultContainer/>}></Route>
           <Route path="/news" element={<NewsContainer/>}></Route>
           <Route path="/funds" element={<FundsContainer />}></Route>
