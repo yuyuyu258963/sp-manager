@@ -64,11 +64,19 @@ class FundsContainer extends React.Component<IProps, IState>{
   state: Readonly<IState> = { data: [] };
 
   componentDidMount(): void {
+    const BaseUrl = "http://121.4.249.181:5590/";
+    
     let _this = this;
     axios(
       {
         method: "post",
-        url: '/api/show',
+        url: `${BaseUrl}show`,
+        // url: '/api/show',
+        timeout: 50000,
+        // headers: {
+        //   'Content-Type': '*',
+        //   'Access-Control-Allow-Origin': "*",
+        // },
       }
     )
       .then(function (response) {

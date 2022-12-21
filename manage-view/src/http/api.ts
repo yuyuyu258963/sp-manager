@@ -44,7 +44,6 @@ export const Login = async (data:any) => {
   })
 }
 
-
 /**
  * 用户注册
  * @param data 

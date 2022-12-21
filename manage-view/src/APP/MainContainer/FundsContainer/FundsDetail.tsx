@@ -24,9 +24,13 @@ export default function FundsDetail() {
   let location = useLocation();
   const [fundsRateData, setFundsData] = useState([])
   const fundID: string = location.pathname.split('/').reverse()[0];
+  const BaseUrl = "http://121.4.249.181:5590/";
+  
   axios({
     method: "post",
-    url: "/api/trend/net",
+    url: `${BaseUrl}trend/net`,
+    timeout: 50000,
+    // url: "/api/trend/net",
     data: JSON.stringify({ "_id": fundID }),
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
@@ -41,9 +45,12 @@ export default function FundsDetail() {
     })
 
   const [rankData, setRankData] = useState([])
+
   axios({
     method: "post",
-    url: "/api/rank",
+    url: `${BaseUrl}rank`,
+    timeout: 50000,
+    // url: "/api/rank",
     data: JSON.stringify({ "_id": fundID }),
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
@@ -74,7 +81,8 @@ export default function FundsDetail() {
   })
   axios({
     method: "post",
-    url: "/api/show/single",
+    url: `${BaseUrl}show/single`,
+    // url: "/api/show/single",
     data: JSON.stringify({ "_id": fundID }),
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
