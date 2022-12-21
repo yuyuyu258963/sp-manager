@@ -3,11 +3,16 @@ import os
 import json
 from io import BytesIO
 
+import sys
+sys.path.append(r'C:\Users\Administrator\Desktop\sp-manager')
+
 from flask import Flask, request, Blueprint, render_template, make_response, session, flash
 from ret.dbHandler import DbHandler
 from flask_mail import Mail, Message
 from picture import validate_picture
 import models
+
+
 
 
 app = Flask(__name__)
@@ -37,34 +42,41 @@ def getAllData():
 
 @app.route('/trend/net', methods=['POST', 'GET'])
 def getNetData():
+    
+    id = request.data.decode()
+    id = id.split('"')[3]
     schema = DbHandler("fund_netVal").schema
     index = 0
     data = []
-    for item in schema.find():
-        index += 1
-        data.append(item)
-        if index == 100:
-            break
-    print("getNetData Success")
-    return json.dumps(data, ensure_ascii=False)
+    net = schema.find({"_id":id})
+    if net == []:
+        print("getNetData Error")
+    else:
+        net = net[0]["netVal_path"]
+        for time in net.keys():
+            data.append([time, net[time]])
+        print("getNetData Success")
+    return data
 
 
 cr_code = ""
 
 @app.route('/rank', methods=['POST', 'GET'])
 def getRankData():
+    id = request.data.decode()
+    id = id.split('"')[3]
     schema = DbHandler("fund_ranking").schema
     index = 0
     data = []
-    for item in schema.find():
-        if item["_id"] in id:
-            index += 1
-            data.append(item)
-        if index == 100:
-            break
-    # print(json.dumps(data, ensure_ascii=False))
-    print("getRankData Success")
-    return json.dumps(data, ensure_ascii=False)
+    rank = schema.find({"_id": id})
+    if rank == []:
+        print("getRankData Error")
+    else:
+        rank = rank[0]["rank_data"]
+        for time in rank.keys():
+            data.append([time, rank[time]])
+        print("getRankData Success")
+    return data
 
 
 @app.route('/code', methods=['POST', 'GET'])
@@ -79,7 +91,7 @@ def get_code():
     response.headers['Content-Type'] = 'image/gif'
     # 将验证码字符串储存在session中
     session['image'] = str
-    # print(response)
+    print("code success")
     return {"response":response, "str":str}
     # return response
 

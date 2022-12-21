@@ -37,4 +37,3 @@ def validate_picture():
 
     im = im.filter(ImageFilter.FIND_EDGES)
     return im, str
-
