@@ -12,7 +12,6 @@
 p{
   display: inline-block;
   width: 10vw;
-  float: left;
 }
 
 .BaseDataTitle {
@@ -81,10 +80,24 @@ p{
   float: left;
 }
 
-.percent {
+.percent-up {
   font-size: 30px;
   color: #f44446;
   overflow: hidden;
+}
+.percent-down{
+  font-size: 30px;
+  color: #0c9f18;
+  overflow: hidden;
+}
+
+.increase-up{
+  display: inline;
+  color:#f44446;
+}
+.increase-down{
+  display: inline;
+  color: #0c9f18;
 }
 
 .sp-rate{

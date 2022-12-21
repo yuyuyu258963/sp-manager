@@ -236,15 +236,16 @@ export default function FundsDetail() {
                 <div className='data-display-top'>
                   <div className='d-wfsy'>
                     <p className="value">
-                      <b className="percent">
+                      <b className={rateData_top[rateData_top.length-1]-rateData_top[rateData_top.length-2]>=0?"percent-up":"percent-down"}>
                         {rateData_top[rateData_top.length-1]}<span>%</span>
                       </b>
+                      <div className={rateData_top[rateData_top.length-1]-rateData_top[rateData_top.length-2]>=0?"increase-up":"increase-down"}>{(rateData_top[rateData_top.length-1]-rateData_top[rateData_top.length-2]).toFixed(3)}</div>
                     </p>
                     <p className="key">单位净值[12-20]</p>
                   </div>
                   <div className='d-wfsy'>
                     <p className="value">
-                      <b className="percent">
+                      <b className={rateData_top[rateData_top.length-1]-rateData_top[rateData_top.length-2]>=0?"percent-up":"percent-down"}>
                         {rateData_top[rateData_top.length-1]}<span>%</span>
                       </b>
                     </p>
@@ -284,37 +285,3 @@ export default function FundsDetail() {
 }
 
 
-
-// class FundsDetail extends React.Component<IProps, IState> {
-
-//   navigation = useNavigate();
-
-//   componentDidMount(){
-//     console.log("match",this.navigation);
-
-// }
-
-//   render() {
-//     return (
-//       <div id='FundsDetail'>
-//         <div className='BaseData'>
-//           <div className='BaseDataTitle'>
-
-//             <h1>FundsName</h1>
-//             <span>FoundCode</span>
-//             <span>FoundTips</span>
-//             <span>FoundRisks</span>
-//           <div className="ti-right"><span>加自选</span></div>
-//           </div>
-//           <div className='BaseDataContainer'>
-//             <div className='cartogram'>
-//               <div className=''></div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
-
-// export default FundsDetail
