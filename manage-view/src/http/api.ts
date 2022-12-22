@@ -1,11 +1,11 @@
 import { notification } from "antd";
 import axios from "axios";
 
-const BaseUrl = "http://121.4.249.181:5590/";
+const BaseUrl = "http://127.0.0.1:5590/";
 
 // 进行统一配置
 const service = axios.create({
-  baseURL: "http:121.4.249.181:5590",
+  baseURL: "http:127.0.0.1:5590",
   // 统一设置超时时间
   timeout: 50000,
   // 允许携带cookie

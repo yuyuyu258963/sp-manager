@@ -1,6 +1,6 @@
 package main
 
 var (
-	linkUrl      = "mongodb://root:ywh@121.4.249.181:668/"
+	linkUrl      = "mongodb://root:ywh@127.0.0.1:668/"
 	dataBaseName = "Ywh"
 )

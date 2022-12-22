@@ -64,7 +64,7 @@ class FundsContainer extends React.Component<IProps, IState>{
   state: Readonly<IState> = { data: [] };
 
   componentDidMount(): void {
-    const BaseUrl = "http://121.4.249.181:5590/";
+    const BaseUrl = "http://127.0.0.1:5590/";
     
     let _this = this;
     axios(

@@ -19,7 +19,7 @@ class DbHandler(object):
     return self.schema
   
   @classmethod
-  def connect(self,ip="121.4.249.181",port="668",databaseName="Ywh",schemaName="company_info"):
+  def connect(self,ip="127.0.0.1",port="668",databaseName="Ywh",schemaName="company_info"):
     """
         :param url: ip地址
         :param port_id:连接数据库的端口  默认为688

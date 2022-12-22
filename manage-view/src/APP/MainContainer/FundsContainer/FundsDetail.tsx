@@ -24,7 +24,7 @@ export default function FundsDetail() {
   let location = useLocation();
   const [fundsRateData, setFundsData] = useState([])
   const fundID: string = location.pathname.split('/').reverse()[0];
-  const BaseUrl = "http://121.4.249.181:5590/";
+  const BaseUrl = "http://127.0.0.1:5590/";
   
   axios({
     method: "post",
